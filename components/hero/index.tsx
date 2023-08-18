@@ -1,5 +1,7 @@
-import {Button, Divider, Input, Text} from '@nextui-org/react';
 import React from 'react';
+import {Button, Divider, Input, Text,Card, CardBody} from '@nextui-org/react';
+// import {} from "@nextui-org/react";
+
 import {CheckIcon} from '../icons/CheckIcon';
 import {Box} from '../styles/box';
 import {Flex} from '../styles/flex';
@@ -36,22 +38,14 @@ export const Hero = () => {
                   css={{
                      maxWidth: '600px',
                   }}
-               >
+               > 
                   <Text
                      h1
                      css={{
                         display: 'inline',
                      }}
                   >
-                     The modern landing page{' '}
-                  </Text>
-                  <Text
-                     h1
-                     css={{
-                        display: 'inline',
-                     }}
-                  >
-                     for{' '}
+              
                   </Text>
                   <Text
                      h1
@@ -60,21 +54,10 @@ export const Hero = () => {
                      }}
                      color="primary"
                   >
-                     React developers
+                     訂閱電子報，緊貼理財貼士、搶先得知獨家優惠資訊。
                   </Text>
                </Box>
-
-               <Text
-                  css={{
-                     color: '$accents8',
-                     maxWidth: '400px',
-                  }}
-                  size={'$lg'}
-                  span
-               >
-                  The easiest way to build React Landing page in seconds. Save
-                  time and focus on your project.
-               </Text>
+ 
 
                <Flex
                   css={{
@@ -83,8 +66,8 @@ export const Hero = () => {
                   }}
                   wrap={'wrap'}
                >
-                  <Input placeholder="Enter your email address" size="lg" />
-                  <Button>Start Free Trial</Button>
+                  <Input placeholder="請輸入電郵地址" size="lg" />
+                  <Button>訂閱</Button>
                </Flex>
                <Flex
                   wrap={'wrap'}
@@ -96,29 +79,14 @@ export const Hero = () => {
                      },
                   }}
                >
+
                   <Flex
                      css={{
                         color: '$accents7',
                         alignItems: 'center',
                      }}
                   >
-                     <CheckIcon /> No credit card required.
-                  </Flex>
-                  <Flex
-                     css={{
-                        color: '$accents7',
-                        alignItems: 'center',
-                     }}
-                  >
-                     <CheckIcon /> 14-day free trial.
-                  </Flex>
-                  <Flex
-                     css={{
-                        color: '$accents7',
-                        alignItems: 'center',
-                     }}
-                  >
-                     <CheckIcon /> Cancel anytime.
+                     <CheckIcon /> 隨時取消訂閱
                   </Flex>
                </Flex>
             </Box>
@@ -130,7 +98,7 @@ export const Hero = () => {
                   },
                }}
             >
-               <img src="mock.png" />
+
             </Box>
          </Flex>
          <Divider
@@ -139,3 +107,4 @@ export const Hero = () => {
       </>
    );
 };
+// export default Hero;

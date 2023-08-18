@@ -38,7 +38,7 @@ export const Features1 = () => {
                      color: '$accents8',
                   }}
                >
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                  AAAALorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
                   condimentum, nisl ut aliquam lacinia, nisl nisl aliquet nisl,
                   nec tincidunt nisl lorem eu nunc. Sed euismod, nisl ut aliquam
                   lacinia,

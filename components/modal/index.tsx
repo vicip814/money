@@ -18,7 +18,7 @@ export const ModalLogin = () => {
    };
    return (
       <div>
-         <Navbar.Link onClick={handler}>Login</Navbar.Link>
+         <Navbar.Link onClick={handler}>登入</Navbar.Link>
          <Modal
             closeButton
             blur
@@ -28,10 +28,7 @@ export const ModalLogin = () => {
          >
             <Modal.Header>
                <Text id="modal-title" size={18}>
-                  Welcome to
-                  <Text b size={18}>
-                     NextUI
-                  </Text>
+                  歡迎光臨
                </Text>
             </Modal.Header>
             <Modal.Body>
@@ -55,17 +52,17 @@ export const ModalLogin = () => {
                />
                <Row justify="space-between">
                   <Checkbox>
-                     <Text size={14}>Remember me</Text>
+                     <Text size={14}>記住密碼</Text>
                   </Checkbox>
-                  <Text size={14}>Forgot password?</Text>
+                  <Text size={14}>忘記密碼</Text>
                </Row>
             </Modal.Body>
             <Modal.Footer>
                <Button auto flat color="error" onClick={closeHandler}>
-                  Close
+                  關閉
                </Button>
                <Button auto onClick={closeHandler}>
-                  Sign in
+                  登入
                </Button>
             </Modal.Footer>
          </Modal>

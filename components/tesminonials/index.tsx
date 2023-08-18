@@ -43,7 +43,7 @@ export const Testimonials = () => {
                                  color: '$accents8',
                               }}
                            >
-                              Lorem ipsum dolor sit amet, consectetur adipiscing
+                              AAALorem ipsum dolor sit amet, consectetur adipiscing
                               elit. Sed condimentum, nisl ut aliquam lacinia,
                               nisl nisl aliquet nisl,
                            </Text>

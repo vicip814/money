@@ -11,12 +11,63 @@ export const Nav = () => {
    const {setTheme} = useNextTheme();
    const {isDark, type} = useTheme();
    const collapseItems = [
-      'Features',
-      'Customers',
-      'Pricing',
-      'Company',
-      'Legal',
+      '私人貸款比較',
+      '信用卡比較',
+      '保險比較',
+      '按揭比較',
+      '證券戶口比較',
+	  '理財戶口比較',
+	  'BLOG',
+	  '下載 App',
+	  '獎賞換領',
    ];
+   
+   const ploanItems = [
+	'所有私人貸款',
+	'熱門貸款',
+	'稅務貸款',
+	'私人分期貸款',
+	'結餘轉戶 (清卡數貸款)',
+	'銀行貸款',
+	'財務公司貸款',
+	'業主貸款',
+	'虛擬銀行貸款',
+	'特快貸款',
+	'小額貸款',
+	'循環貸款',
+	'汽車貸款',
+	'企業貸款',
+	'易批貸款',
+	'免露面貸款'
+   ];   
+   
+   const creditCardItems =[
+	'所有信用卡',
+	'熱門信用卡',
+	'現金回贈信用卡',
+	'里數信用卡',
+	'信用卡迎新禮品',
+	'機場貴賓室信用卡',
+	'銀聯信用卡',
+	'低門檻/學生信用卡',
+	'電子錢包信用卡',
+	'Visa信用卡',
+	'餐飲信用卡',
+	'網購信用卡',
+	'八達通自動增值信用卡',
+	'尊尚信用卡',
+	'萬事達卡',
+	'公司信用卡'   
+	];
+	
+	const bankItems=[
+		'所有銀行戶口',
+		'熱門銀行戶口',
+		'尊尚銀行戶口',
+		'定期存款',
+		'電子錢包'
+	];
+   
    return (
       <Navbar
          isBordered
@@ -31,9 +82,11 @@ export const Nav = () => {
          <Navbar.Brand>
             <Navbar.Toggle aria-label="toggle navigation" showIn="xs" />
             <AcmeLogo />
+			<Link href="/">
             <Text b color="inherit" hideIn="xs">
-               ACME
+               LOGO
             </Text>
+			</Link> 
             <Navbar.Content
                hideIn="sm"
                css={{
@@ -53,11 +106,11 @@ export const Nav = () => {
                         iconRight={icons.chevron}
                         ripple={false}
                      >
-                        Features
+                        私人貸款比較
                      </Dropdown.Button>
                   </Navbar.Item>
                   <Dropdown.Menu
-                     aria-label="ACME features"
+                     aria-label="私人貸款比較"
                      css={{
                         '$$dropdownMenuWidth': '340px',
                         '$$dropdownItemHeight': '70px',
@@ -74,53 +127,107 @@ export const Nav = () => {
                         },
                      }}
                   >
+                     {ploanItems.map((item,index)=>(
                      <Dropdown.Item
-                        key="autoscaling"
-                        showFullDescription
-                        description="ACME scales apps to meet user demand, automagically, based on load."
-                        icon={icons.scale}
-                     >
-                        Autoscaling
-                     </Dropdown.Item>
-                     <Dropdown.Item
-                        key="usage_metrics"
-                        showFullDescription
-                        description="Real-time metrics to debug issues. Slow query added? We’ll show you exactly where."
-                        icon={icons.activity}
-                     >
-                        Usage Metrics
-                     </Dropdown.Item>
-                     <Dropdown.Item
-                        key="production_ready"
-                        showFullDescription
-                        description="ACME runs on ACME, join us and others serving requests at web scale."
-                        icon={icons.flash}
-                     >
-                        Production Ready
-                     </Dropdown.Item>
-                     <Dropdown.Item
-                        key="99_uptime"
-                        showFullDescription
-                        description="Applications stay on the grid with high availability and high uptime guarantees."
-                        icon={icons.server}
-                     >
-                        +99% Uptime
-                     </Dropdown.Item>
-                     <Dropdown.Item
-                        key="supreme_support"
-                        showFullDescription
-                        description="Overcome any challenge with a supporting team ready to respond."
+                        key={item}
                         icon={icons.user}
                      >
-                        +Supreme Support
-                     </Dropdown.Item>
+					{item}
+					</Dropdown.Item>
+					))}				 
                   </Dropdown.Menu>
                </Dropdown>
-               <Navbar.Link isActive href="#">
-                  Customers
-               </Navbar.Link>
-               <Navbar.Link href="#">Pricing</Navbar.Link>
-               <Navbar.Link href="#">Company</Navbar.Link>
+               <Dropdown isBordered>
+                  <Navbar.Item>
+                     <Dropdown.Button
+                        auto
+                        light
+                        css={{
+                           px: 0,
+                           dflex: 'center',
+                           svg: {pe: 'none'},
+                        }}
+                        iconRight={icons.chevron}
+                        ripple={false}
+                     >
+                        信用卡比較
+                     </Dropdown.Button>
+                  </Navbar.Item>
+                  <Dropdown.Menu
+                     aria-label="信用卡比較"
+                     css={{
+                        '$$dropdownMenuWidth': '340px',
+                        '$$dropdownItemHeight': '70px',
+                        '& .nextui-dropdown-item': {
+                           'py': '$4',
+                           'svg': {
+                              color: '$secondary',
+                              mr: '$4',
+                           },
+                           '& .nextui-dropdown-item-content': {
+                              w: '100%',
+                              fontWeight: '$semibold',
+                           },
+                        },
+                     }}
+                  >
+                     {creditCardItems.map((item,index)=>(
+                     <Dropdown.Item
+                        key={item}
+                        icon={icons.user}
+                     >
+					{item}
+					</Dropdown.Item>
+					))}				 
+                  </Dropdown.Menu>
+               </Dropdown>
+               <Dropdown isBordered>
+                  <Navbar.Item>
+                     <Dropdown.Button
+                        auto
+                        light
+                        css={{
+                           px: 0,
+                           dflex: 'center',
+                           svg: {pe: 'none'},
+                        }}
+                        iconRight={icons.chevron}
+                        ripple={false}
+                     >
+                        理財戶口比較
+                     </Dropdown.Button>
+                  </Navbar.Item>
+                  <Dropdown.Menu
+                     aria-label="理財戶口比較"
+                     css={{
+                        '$$dropdownMenuWidth': '340px',
+                        '$$dropdownItemHeight': '70px',
+                        '& .nextui-dropdown-item': {
+                           'py': '$4',
+                           'svg': {
+                              color: '$secondary',
+                              mr: '$4',
+                           },
+                           '& .nextui-dropdown-item-content': {
+                              w: '100%',
+                              fontWeight: '$semibold',
+                           },
+                        },
+                     }}
+                  >
+                     {bankItems.map((item,index)=>(
+                     <Dropdown.Item
+                        key={item}
+                        icon={icons.user}
+                     >
+					{item}
+					</Dropdown.Item>
+					))}				 
+                  </Dropdown.Menu>
+               </Dropdown>			   
+
+               <Navbar.Link href="/api/test">保險比較</Navbar.Link>
+               <Navbar.Link href="/api/test">按揭比較</Navbar.Link>
             </Navbar.Content>
          </Navbar.Brand>
 
@@ -132,7 +239,7 @@ export const Nav = () => {
                      css={{
                         minWidth: '100%',
                      }}
-                     href="#"
+                     href="/api/productdata"
                   >
                      {item}
                   </Link>
@@ -164,7 +271,7 @@ export const Nav = () => {
 
             <Navbar.Item>
                <Button auto flat href="#">
-                  Start free trial
+                  註冊
                </Button>
             </Navbar.Item>
             <Navbar.Item hideIn={'xs'}>
