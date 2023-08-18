@@ -16,7 +16,7 @@ const lendType = [
   { value: "汽車貸款", label: "汽車貸款" },
   { value: "中小企貸款", label: "中小企貸款" },  
 ];
-  const [product, setProduct] = React.useState('');
+  const [product, setProduct] = React.useState('私人貸款');
 
   const handleChange = (event) => {
        const selectedValue = event.target.value;
@@ -33,6 +33,7 @@ const lendType = [
           id="Productlabel"
           value={product}
           label="貸款種類"
+		
           onChange={handleChange}
         >
 		  {lendType.map((item, index) => (

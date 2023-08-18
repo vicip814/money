@@ -16,7 +16,7 @@ const tenorList = [
   { value: "72", label: "72個月" },
   { value: "82", label: "84個月" },
 ];
-  const [tenor, setTenor] = React.useState('');
+  const [tenor, setTenor] = React.useState('24');
 
   const handleChange = (event) => {
         const selectedValue = event.target.value;
