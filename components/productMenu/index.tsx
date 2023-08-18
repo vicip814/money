@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 export const ProductMenu = () =>{
 	const router = useRouter();
-	const handleCardClick = (itemId) => {
+	const handleCardClick = () => {
 	  // Assuming you have a route named 'test' with a dynamic parameter 'itemId'
 	  router.push(`/productMain`);
 	};
@@ -43,15 +43,10 @@ export const ProductMenu = () =>{
     }
   ];
   return (
-     <Grid.Container gap={5} justify="center"   sx={{
-    marginTop: '50px',
-    paddingBottom: '20px',
-    paddingLeft: '30px',
-    paddingRight: '40px',
-  }}>
+     <Grid.Container gap={5} justify="center">
       {list.map((item, index) => (
         <Grid xs={3} sm={3} lg={2} key={index}>
-          <Card isHoverable isPressable width="100%"  onClick={() => handleCardClick()}>
+          <Card isHoverable isPressable   onClick={() => handleCardClick()}>
             <Card.Body css={{ p: 0 }}>
               <Card.Image
                 objectFit="cover"
@@ -61,7 +56,7 @@ export const ProductMenu = () =>{
                 alt={item.title}
               />
             </Card.Body>
-            <Card.Footer justify="flex-start">
+            <Card.Footer >
               <Row justify="space-between">
                 <Text b>{item.title}</Text>
                 <Text css={{ color: "$accents4", fontWeight: "$semibold" }}>

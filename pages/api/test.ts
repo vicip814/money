@@ -5,7 +5,7 @@ import puppeteer from 'puppeteer';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
-    const browser = await puppeteer.launch({ headless: true });
+    const browser = await puppeteer.launch({ headless: "new" });
     const page = await browser.newPage();
 	const baseurl = 'https://www.moneysmart.hk/zh-hk/personal-loan';
 	const url = new URL(baseurl+req.url);

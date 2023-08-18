@@ -8,7 +8,7 @@ import SelectTenor from './SelectTenor';
 import SelectProduct from './SelectProduct';
 import {Button} from "@nextui-org/react";
 import ProductData from './ProductData';
-export const ProcductMain: NextPage = () => {
+export const ProcductMain = () => {
 
 
 const tenor = [
@@ -33,7 +33,7 @@ const lendType = [
   { value: "汽車貸款", label: "汽車貸款" },
   { value: "中小企貸款", label: "中小企貸款" },  
 ];
-const handleSubmit = (event: SelectChangeEvent) => {
+const handleSubmit = (event) => {
 	 setButtonClicked(buttonClicked+1);
      // console.log('Loan Amount:', loanAmount);
     // console.log('Monthly Income:', monthlyIncome);
@@ -56,7 +56,7 @@ const handleSubmit = (event: SelectChangeEvent) => {
     setMonthlyIncome(event.target.value);
   };
 
-const ProductList = () => <Select options={lendType} label="ABC" />;
+//const ProductList = () => <Select options={lendType} label="ABC" />;
 
  const handleSelectProductChange = (selectedProduct) => {
     setProduct(selectedProduct);

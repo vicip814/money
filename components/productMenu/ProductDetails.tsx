@@ -1,5 +1,5 @@
 import { Card,  Row, Text, Grid } from '@nextui-org/react';
-import {ProcductMain} from '../ProductMain';
+//import {ProcductMain} from '../ProductMain';
 import { useRouter } from 'next/router';
 // import {Button, Divider, Input, Text,Card, CardBody} from '@nextui-org/react';
 // import Image from 'next/image'
@@ -41,22 +41,17 @@ const router = useRouter();
       price: "$8.00"
     }
   ];
-	const handleCardClick = (itemId) => {
+	const handleCardClick = () => {
 	  // Assuming you have a route named 'test' with a dynamic parameter 'itemId'
 	  router.push(`/ProductMain`);
 	};
   return (
   <>
  
-     <Grid.Container gap={5} justify="center"   sx={{
-    marginTop: '50px',
-    paddingBottom: '20px',
-    paddingLeft: '30px',
-    paddingRight: '40px',
-  }}>
+     <Grid.Container gap={5} justify="center" >
       {list.map((item, index) => (
         <Grid xs={7} sm={7} lg={7} key={index}>
-          <Card isHoverable isPressable width="100%"  onClick={() => handleCardClick()}>
+          <Card isHoverable isPressable  onClick={() => handleCardClick()}>
             <Card.Body css={{ p: 0 }}>
               <Card.Image
                 objectFit="cover"
@@ -66,7 +61,7 @@ const router = useRouter();
                 alt={item.title}
               />
             </Card.Body>
-            <Card.Footer justify="flex-start">
+            <Card.Footer>
               <Row justify="space-between">
                 <Text b>{item.title}</Text>
                 <Text css={{ color: "$accents4", fontWeight: "$semibold" }}>

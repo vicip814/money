@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button, Divider, Input, Text,Card, CardBody} from '@nextui-org/react';
+import {Button, Divider, Input, Text,Card} from '@nextui-org/react';
 // import {} from "@nextui-org/react";
 
 import {CheckIcon} from '../icons/CheckIcon';

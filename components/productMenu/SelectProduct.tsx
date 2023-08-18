@@ -37,7 +37,7 @@ const lendType = [
           onChange={handleChange}
         >
 		  {lendType.map((item, index) => (
-			  <MenuItem value={item.value}>{item.label}</MenuItem>
+			  <MenuItem value={item.value} key={index}>{item.label}</MenuItem>
 		  ))}
         </Select>
 

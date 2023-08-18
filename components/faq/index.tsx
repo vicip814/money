@@ -43,7 +43,7 @@ export const Faq = () => {
                }}
                direction={'column'}
             >
-               <Flex css={{gap: '$5'}} justify={'left'}>
+               <Flex css={{gap: '$5'}} >
                   <BoxIcon />
                   <Flex direction={'column'} css={{gap: '$3'}}>
                      <Text h3>
